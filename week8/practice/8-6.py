@@ -17,19 +17,19 @@ def main():
     global gData
     try:
         while True:
-            if gData.find("go") >= 0:
+            if gData.find("B2") >= 0:
                 gData = ""
                 print("ok go")
-            elif gData.find("back") >= 0:
+            elif gData.find("B4") >= 0:
                 gData = ""
                 print("ok back")
-            elif gData.find("left") >= 0:
+            elif gData.find("B1") >= 0:
                 gData = ""
                 print("ok left")
-            elif gData.find("right") >= 0:
+            elif gData.find("B3") >= 0:
                 gData = ""
                 print("ok right")
-            elif gData.find("stop") >= 0:
+            elif gData.find("B0") >= 0:
                 gData = ""
                 print("ok stop")
     except KeyboardInterrupt:
