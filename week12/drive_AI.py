@@ -166,6 +166,7 @@ def main():
             # image processing start here
             crop_img = frame[int(v_y/2):,:]
             crop_img = cv.resize(crop_img, (200, 66))
+            show_grid(crop_img)
             cv.imshow('crop_img ', cv.resize(crop_img, dsize=(0,0), fx=2, fy=2))
 
             if enable_AIdrive == True:
@@ -193,13 +194,13 @@ def main():
 
 if __name__ == '__main__':
 
-    v_x = 320
-    v_y = 240
+    v_x = 640
+    v_y = 480
     v_x_grid = [int(v_x*i/10) for i in range(1, 10)]
     print(v_x_grid)
     moment = np.array([0, 0, 0])
 
-    model_path = '/home/pi/hello-git/log-git/week12/lane_navigation_20241202_1207.h5'
+    model_path = '/home/pi/hello-git/log-git/week13/lane_navigation_20241204_1505.h5'
     
     model = load_model(model_path)
     '''print('id', id(model))
